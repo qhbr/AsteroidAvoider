@@ -13,6 +13,8 @@ public class GameOverHandler : MonoBehaviour
   [SerializeField] private ScoreSystem scoreSystem;
   [SerializeField] private GameObject gameOverDisplay;
   [SerializeField] private AsteroidSpawner asteroidSpawner;
+  [SerializeField] private int maxEnergy;
+  [SerializeField] private int energyRechargeDuration;
   
   public void EndGame()
   {
@@ -30,7 +32,7 @@ public class GameOverHandler : MonoBehaviour
   }
   public void ContinueButton()
   {
-    AdManager.Instance.ShowAd(this);
+  
     
     continueButton.interactable = false;
   }
